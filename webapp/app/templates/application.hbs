@@ -1,0 +1,79 @@
+<header class="navbar">
+    <nav class="hide-on-sm hide-on-md">
+        {{link-to 'Title/Logo' 'application' class="left logo"}}
+        <ul class="right nav horizontal">
+            {{!-- <li class="active"><a href="#">Active Link</a></li>
+            <li class="dropdown">
+                <a href="#">Dropdown</a>
+                <ul class="submenu nav vertical">
+                    <li><a href="#">link1</a></li>
+                    <li><a href="#">link2 Longer</a></li>
+                    <li><a href="#">link3 Extra</a></li>
+                    <li><a href="#">link4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Regular</a></li>
+            <li class="cta"><a href="#">CTA</a></li> --}}
+            {{#if session.isAuthenticated}}
+            {{else}}
+                <li>
+                    {{#link-to 'login'}}Login{{/link-to}}
+                </li>
+                <li class="cta primary">
+                    {{#link-to 'register'}}Register{{/link-to}}
+                </li>
+            {{/if}}
+        </ul>
+    </nav>
+    <nav class="hide-on-lg hide-on-xl">
+        <a class="left logo" href="#">Title/Logo</a>
+        <a id="menu-toggler" href="#" class="right menu-toggle "></a>
+        <ul class="nav vertical mobile">
+            <li><a class="logo center" href="#">Title/Logo</a></li>
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2 Longer</a></li>
+            <li><a href="#">link3 Extra</a></li>
+            <li><a href="#stuff">link4</a></li>
+        </ul>
+    </nav>
+</header>
+
+<aside class="left menu-wrapper">
+    <ol>
+        <li>Getting Started</li>
+        <li>
+            Topic
+            <ol>
+                <li>sub topic</li>
+                <li>sub topic</li>
+                <li>sub topic</li>
+            </ol>
+        </li>
+        <li>
+            Topic
+            <ol>
+                <li>sub topic</li>
+                <li>sub topic</li>
+                <li>sub topic</li>
+                <li>sub topic</li>
+                <li>sub topic</li>
+            </ol>
+        </li>
+        <li>Topic</li>
+        <li>Topic</li>
+    </ol>
+    <div class="resources">
+        {{#link-to 'login'}}
+            {{fa-icon "github"}}
+            GitHub
+        {{/link-to}}
+    </div>
+</aside>
+
+<aside class="right conversation-wrapper">
+    chat
+</aside>
+
+<main>
+    {{outlet}}
+</main>

@@ -1,0 +1,84 @@
+// @import '04_config';
+
+// @if $robust == true {
+//   $bg-color: rgba(0, 0, 0, 0.7);
+//   $txt-color: rgba(255, 255, 255, 0.9);
+//   $duration: 200ms;
+
+//   .notification-wrapper {
+//     position: fixed;
+//     top: 20px;
+//     right: 20px;
+    
+//     .notification {
+//       position: relative;
+//       background-color: $bg-color;
+//       color: $txt-color;
+//       padding: 1.2rem 3.5rem;
+//       border-radius: 4px;
+//       margin-bottom: 1rem;
+//       // visibility: hidden;
+      
+//       animation-name: stretchLeft;
+//       -webkit-animation-name: stretchLeft;  
+
+//       animation-duration: $duration;
+//       -webkit-animation-duration: $duration;
+
+//       animation-timing-function: ease-out;  
+//       -webkit-animation-timing-function: ease-out;  
+      
+
+//       transform-origin: 100% 0%;
+//       -ms-transform-origin: 100% 0%;
+//       -webkit-transform-origin: 100% 0%;
+
+//       a { 
+//         color: #fff; 
+//         text-decoration: underline;
+//       }
+//     }
+    
+//     .remove {
+//       animation-name: stretchRemove;
+//       -webkit-animation-name: stretchRemove;
+      
+//       animation-fill-mode: forwards;
+//     }
+    
+//     .shrink {
+//       animation-name: shrink;
+//       -webkit-animation-name: shrink;
+      
+//       animation-fill-mode: forwards;
+      
+//       animation-duration: $duration;
+//     }
+//   }
+
+//   @keyframes stretchLeft {
+//     0% { transform: scaleX(0.3); }
+//     40% { transform: scaleX(1.02); }
+//     60% { transform: scaleX(0.98); }
+//     80% { transform: scaleX(1.01); }
+//     100% { transform: scaleX(0.98); }       
+//     80% { transform: scaleX(1.01); }
+//     100% { transform: scaleX(1); }              
+//   }
+
+
+//   @keyframes stretchRemove {
+//     0% { transform: scaleX(1); }
+//     40% { transform: scaleX(1.01); }
+//     60% { transform: scaleX(0.98); }
+//     80% { transform: scaleX(1.01); }
+//     100% { transform: scaleX(0.98); }       
+//     80% { transform: scaleX(1.02); }
+//     100% { transform: scaleX(0.1); }              
+//   }
+
+//   @keyframes shrink {
+//     from { margin-top: 0; transform: scale(0); }
+//     to { margin-top: -4.4rem; transform: scale(0); }
+//   }
+// }

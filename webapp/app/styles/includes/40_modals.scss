@@ -1,0 +1,138 @@
+// $modal-height: 250px;
+// $modal-width: $modal-height * 1.618;
+// $modal-color: #fff;
+// $modal-z-index: 9999;
+// $modal-wrapper-transition-speed: 400ms;
+
+// .modal-wrapper,
+// .modal-wrapper .overlay {
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+// }
+
+// .modal-wrapper {
+//     position: fixed;
+//     display: -webkit-flex;
+//     display: flex;
+//     -webkit-align-items: center;
+//     align-items: center;
+//     -webkit-justify-content: center;
+//     justify-content: center;
+//     pointer-events: none;
+//     .modal {
+//         position: relative;
+//         z-index: 5;
+//     }
+// }
+
+// .modal-wrapper .overlay {
+//     position: absolute;
+//     z-index: 1;
+//     // background: rgba(55, 58, 71, 0.9);
+//     background: rgba(0, 0, 0, 0.8);
+//     opacity: 0;
+//     -webkit-transition: opacity 0.3s;
+//     transition: opacity 0.3s;
+//     -webkit-backface-visibility: hidden;
+// }
+
+// .modal-wrapper.open .overlay {
+//     opacity: 1;
+//     pointer-events: auto;
+// }
+
+// .modal {
+//     width: 50%;
+//     max-width: 560px;
+//     min-width: 290px;
+//     background: #fff;
+//     padding: 4em;
+//     position: absolute;
+//     z-index: -1;
+//     opacity: 0;
+//     .header {
+//         text-align: center;
+//         font-size: 1.4rem;
+//         margin-bottom: 1em;
+//         font-weight: 500;
+//     }
+//     .text {
+//         font-weight: 400;
+//     }
+// }
+
+// .modal-wrapper.open .modal {
+//     pointer-events: auto;
+// }
+
+// .modal-wrapper.overlay {
+//     -webkit-transition-duration: 0.4s;
+//     transition-duration: 0.4s;
+// }
+
+// .modal-wrapper.open .modal,
+// .modal-wrapper.close .modal {
+//     -webkit-animation-duration: 0.4s;
+//     animation-duration: 0.4s;
+//     -webkit-animation-fill-mode: forwards;
+//     animation-fill-mode: forwards;
+// }
+
+// .modal-wrapper.open .modal {
+//     -webkit-animation-name: anim-open;
+//     animation-name: anim-open;
+//     -webkit-animation-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+//     animation-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+// }
+
+// .modal-wrapper.close .modal {
+//     -webkit-animation-name: anim-close;
+//     animation-name: anim-close;
+// }
+
+// @-webkit-keyframes anim-open {
+//     0% {
+//         opacity: 0;
+//         -webkit-transform: scale3d(0, 0, 1);
+//     }
+//     100% {
+//         opacity: 1;
+//         -webkit-transform: scale3d(1, 1, 1);
+//     }
+// }
+
+// @keyframes anim-open {
+//     0% {
+//         opacity: 0;
+//         -webkit-transform: scale3d(0, 0, 1);
+//         transform: scale3d(0, 0, 1);
+//     }
+//     100% {
+//         opacity: 1;
+//         -webkit-transform: scale3d(1, 1, 1);
+//         transform: scale3d(1, 1, 1);
+//     }
+// }
+
+// @-webkit-keyframes anim-close {
+//     0% {
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0;
+//         -webkit-transform: scale3d(0.5, 0.5, 1);
+//     }
+// }
+
+// @keyframes anim-close {
+//     0% {
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0;
+//         -webkit-transform: scale3d(0.5, 0.5, 1);
+//         transform: scale3d(0.5, 0.5, 1);
+//     }
+// }

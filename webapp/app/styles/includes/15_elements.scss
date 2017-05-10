@@ -1,0 +1,22 @@
+@import "03_variables";
+
+section,
+.section {
+	padding: 2vh 0;
+}
+
+@mixin notice() {
+    padding: 2rem;
+}
+
+.success,
+.info,
+.warning,
+.error {
+    @include notice();
+}
+
+.error {
+    background-color: $notice-color-error;
+    color: $notice-color-error-text;
+}

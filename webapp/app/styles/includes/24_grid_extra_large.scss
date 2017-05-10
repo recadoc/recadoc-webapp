@@ -1,0 +1,56 @@
+@import "01_breakpoints";
+@import "02_mixins";
+@import "03_variables";
+
+$built: ();
+$built-offset: ();
+
+$prefix: "xl";
+
+@media screen and (min-width: $breakpoint-xl) {
+    @each $denominator in $grid-sizes {
+        @for $numerator from 1 to $denominator {
+            $width: $numerator / $denominator;
+            // @extend .column;
+            .#{$prefix}-#{$numerator}-#{$denominator} {
+                @if contains($built, $width) == false {
+                    width: percentage($width);
+                    *width: percentage($numerator / $denominator) - 0.031;
+                }
+                @else {
+                    $gcd: greatest-common-denominator($numerator, $denominator);
+                    $num: $numerator / $gcd;
+                    $den: $denominator / $gcd;
+                    @extend .#{$prefix}-#{$num}-#{$den};
+                }
+                $built: append($built, $width);
+            }
+
+            .offset-#{$prefix}-#{$numerator}-#{$denominator} {
+                // @extend .column;
+                @if contains($built-offset, $width) == false {
+                    margin-left: percentage($width);
+                }
+                @else {
+                    $gcd: greatest-common-denominator($numerator, $denominator);
+                    $num: $numerator / $gcd;
+                    $den: $denominator / $gcd;
+                    @extend .offset-#{$prefix}-#{$num}-#{$den};
+                    // @extend .sm-1-2;
+                }
+                $built-offset: append($built, $width);
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+    .hide-on-xl {
+        display: none;
+    }
+
+    .container {
+        width: 65%;
+    }
+}
