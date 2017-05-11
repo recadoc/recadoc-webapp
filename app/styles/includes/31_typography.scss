@@ -1,0 +1,34 @@
+@import '03_variables.scss';
+
+.lightest { font-weight: 100; }
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.heavy { font-weight: 500; }
+.heavier { font-weight: 700; }
+.heaviest { font-weight: 900; }
+
+.tiny { font-size: 0.7rem; }
+.small { font-size: 0.85rem; }
+.regular { font-size: 0.85rem; }
+.big { font-size: 1.3rem; }
+.huge { font-size: 1.8rem; }
+.giant { font-size: 2.5rem; }
+
+.document {
+    * { font-family: 'Fira Sans', sans-serif; }
+
+    p { 
+        color: $dark-grey;
+        line-height: 145%;
+    }
+
+    pre {
+        background: $dark-grey;
+        color: $light-grey;
+        padding: 1rem;
+
+        code {
+            font-family: 'Fira Mono', monospace;
+        }
+    }
+}
