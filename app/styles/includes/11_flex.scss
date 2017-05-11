@@ -1,0 +1,14 @@
+.flex { display: flex !important; }
+.inline-flex { display: inline-flex !important; }
+
+.inline-flex,
+.flex { 
+
+    &.justify-content-space-between { justify-content: space-between; }
+    &.justify-content-space-around { justify-content: space-around; }
+    &.justify-content-center { justify-content: center; }
+
+    &.align-items-center { align-items: center; }
+
+    &.children-1 > * { flex: 1; }
+}

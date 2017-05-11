@@ -1,0 +1,18 @@
+@import '03_variables.scss';
+
+input {
+    @extend .transition-all-200;
+
+    display: block;
+    width: 100%;
+    border: 1px solid lighten($primary, 15%);
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+
+    &:focus {
+        outline: 0;
+        border: 1px solid darken($primary, 15%);
+        box-shadow: 0 0 0 3px darken($primary, 15%);
+    }
+}

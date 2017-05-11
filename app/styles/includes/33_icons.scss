@@ -1,0 +1,187 @@
+$size: 36px;
+$size-small: $size * 2 / 3;
+$size-big: $size * 1.5;
+$size-huge: $size * 2;
+$color: #222;
+$thickness: 4px;
+
+.closer {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    position: relative;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition:    all 100ms ease-out;
+    -o-transition:      all 100ms ease-out;
+    transition:         all 100ms ease-out;
+    
+    &::after,
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        width: $size / 5;
+        height: $size;
+        background-color: $color;
+        -webkit-transition: all 100ms ease-out;
+        -moz-transition:    all 100ms ease-out;
+        -o-transition:      all 100ms ease-out;
+        transition:         all 100ms ease-out;
+    }
+    
+    &::before {
+      transform:    rotate(45deg)
+                        translateX($size/4)
+                        translateY(-$size/4);
+    }
+    &::after {
+      transform:    rotate(-45deg)
+                        translateX($size/4)
+                        translateY($size/4);
+    }
+    
+    &:hover {
+        transform: rotate(90deg);
+        
+        &::before {
+            height: $size * 1.2;
+            width: $size / 8;
+            transform:  rotate(45deg)
+                            translateX($size/4)
+                            translateY(-$size/4)
+                            scale(1.1);
+        }
+        &::after {
+            height: $size * 1.2;
+            width: $size / 8;
+            transform:  rotate(-45deg)
+                            translateX($size/4)
+                            translateY($size/4)
+                            scale(1.1);
+        }
+    }
+    
+    &.small {
+        width: $size-small;
+        height: $size-small;
+        
+        &::after,
+        &::before {
+            width: $size-small / 5;
+            height: $size-small;
+        }
+        
+        &::before {
+            transform:  rotate(45deg)
+                            translateX($size-small/4)
+                            translateY(-$size-small/4);
+        }
+        &::after {
+            transform:  rotate(-45deg)
+                            translateX($size-small/4)
+                            translateY($size-small/4);
+        }
+
+        &:hover {
+            &::before {
+                height: $size-small * 1.2;
+                width: $size-small / 8;
+                transform:  rotate(45deg)
+                                translateX($size-small/4)
+                                translateY(-$size-small/4)
+                                scale(1.1);
+            }
+            &::after {
+                height: $size-small * 1.2;
+                width: $size-small / 8;
+                transform:  rotate(-45deg)
+                                translateX($size-small/4)
+                                translateY($size-small/4)
+                                scale(1.1);
+            }
+        }
+    }
+    
+    &.big {
+        width: $size-big;
+        height: $size-big;
+        
+        &::after,
+        &::before {
+            width: $size-big / 5;
+            height: $size-big;
+        }
+        
+        &::before {
+            transform:  rotate(45deg)
+                            translateX($size-big/4)
+                            translateY(-$size-big/4);
+        }
+        &::after {
+            transform:  rotate(-45deg)
+                            translateX($size-big/4)
+                            translateY($size-big/4);
+        }
+
+        &:hover {
+            &::before {
+                height: $size-big * 1.2;
+                width: $size-big / 8;
+                transform:  rotate(45deg)
+                                translateX($size-big/4)
+                                translateY(-$size-big/4)
+                                scale(1.1);
+            }
+            &::after {
+                height: $size-big * 1.2;
+                width: $size-big / 8;
+                transform:  rotate(-45deg)
+                                translateX($size-big/4)
+                                translateY($size-big/4)
+                                scale(1.1);
+            }
+        }
+    }
+    
+    &.huge {
+        width: $size-huge;
+        height: $size-huge;
+        
+        &::after,
+        &::before {
+            width: $size-huge / 5;
+            height: $size-huge;
+        }
+        
+        &::before {
+            transform:  rotate(45deg)
+                            translateX($size-huge/4)
+                            translateY(-$size-huge/4);
+        }
+        &::after {
+            transform:  rotate(-45deg)
+                            translateX($size-huge/4)
+                            translateY($size-huge/4);
+        }
+
+        &:hover {
+            &::before {
+                height: $size-huge * 1.2;
+                width: $size-huge / 8;
+                transform:  rotate(45deg)
+                                translateX($size-huge/4)
+                                translateY(-$size-huge/4)
+                                scale(1.1);
+            }
+            &::after {
+                height: $size-huge * 1.2;
+                width: $size-huge / 8;
+                transform:  rotate(-45deg)
+                                translateX($size-huge/4)
+                                translateY($size-huge/4)
+                                scale(1.1);
+            }
+        }
+    }
+}

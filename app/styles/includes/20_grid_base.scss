@@ -1,0 +1,62 @@
+@import "02_mixins";
+@import "03_variables";
+
+.row {
+    letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+    text-rendering: optimizespeed;
+    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    -ms-align-content: flex-start;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+}
+
+.row > div,
+.column {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+.column-1 {
+    width: 100%;
+}
+
+$prefixes: "sm" "md" "lg" "xl";
+@each $prefix in $prefixes {
+    @each $denominator in $grid-sizes {
+        @for $numerator from 1 to $denominator {
+            .#{$prefix}-#{$numerator}-#{$denominator} {
+                @extend .column;
+            }
+        }
+    }
+
+    .#{$prefix}-1 {
+        @extend .column-1
+    }
+}
+
+
+// TODO Determine how to handle container on various screen sizes
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+@for $val from 1 to 10 {
+    $gutter: ($val / 2) + vw;
+    .gutter-#{$val} .column {
+        padding: 0 $gutter $gutter $gutter;
+    }
+}

@@ -1,0 +1,22 @@
+<div class="row gutter-2">
+    <div class="sm-1 lg-1-2 offset-lg-1-4">
+        <div class="card breathe-t-80 pad-20">
+            <form {{action 'authenticate' on='submit'}}>
+                <div>
+                    <label for="identification">Username</label>
+                    {{input id='identification' placeholder='Enter Login' value=identification}}
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    {{input id='password' placeholder='Enter Password' type='password' value=password}}
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+                {{#if errorMessage}}
+                    <p>{{errorMessage}}</p>
+                {{/if}}
+            </form>
+        </div>
+    </div>
+</div>

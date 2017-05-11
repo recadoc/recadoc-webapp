@@ -1,0 +1,28 @@
+@import "03_variables";
+
+button,
+.btn {
+    display: inline-block;
+    box-shadow: 0 0 0 1px $main-color inset;
+    // border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: $main-color;
+    background-color: transparent; 
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    &.primary {
+        background: $main-color;
+        color: lighten($main-color, 0%);
+    }
+
+    &.flat { box-shadow: initial; }
+
+    &.small {
+        padding: 4px 8px;
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
+}

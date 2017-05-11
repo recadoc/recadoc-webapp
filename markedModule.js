@@ -1,0 +1,1 @@
+//  See http://www.jimmylauzau.com/blog/2016/03/22/importing-node-modules-in-ember-js
